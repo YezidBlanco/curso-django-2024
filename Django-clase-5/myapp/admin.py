@@ -12,7 +12,7 @@ class PersonAdmin(admin.ModelAdmin):
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = ["id","product_code", "product_name", "brand", "model", "stock"]
-    search_fields = [ "first_name", "last_name"]
+    search_fields = ["product_code", "product_name", "brand", "model"]
     list_filter = ["brand"]
 
 admin.site.register(Person, PersonAdmin)
